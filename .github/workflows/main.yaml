@@ -11,7 +11,7 @@ env:
 
 jobs:
   setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
+    name: Setup, Build, Publish, Configure kubectl, and Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -48,7 +48,7 @@ jobs:
       #   uses: imranismail/setup-kustomize@v1
       # Configure kubectl
       - name: Configure kubectl
-      run |-
+        run: |-
         gcloud config set project $PROJECT_ID
         gcloud config set compute/zone $GKE_ZONE
         gcloud container clusters get-credentials $GKE_CLUSTER
