@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wiz-environments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wiz-environments
+  template:
+    metadata:
+      labels:
+        app: wiz-environments
+    spec:
+      containers:
+        - name: dwk-environments
+          image: PROJECT/IMAGE
