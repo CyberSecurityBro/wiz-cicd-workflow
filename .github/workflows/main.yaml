@@ -6,7 +6,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: wiz-gke-lab-prod
-  GKE_ZONE: us-east1-b
+  GKE_ZONE: us-east1
   IMAGE: simple-web
 
 jobs:
