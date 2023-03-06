@@ -49,9 +49,9 @@ jobs:
       # Configure kubectl
       - name: Configure kubectl
         run: |-
-        gcloud config set project $PROJECT_ID
-        gcloud config set compute/zone $GKE_ZONE
-        gcloud container clusters get-credentials $GKE_CLUSTER
+          gcloud config set project $PROJECT_ID
+          gcloud config set compute/zone $GKE_ZONE
+          gcloud container clusters get-credentials $GKE_CLUSTER
 
       # Deploy the Docker image to the GKE cluster
       - name: Deploy
